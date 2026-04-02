@@ -1,0 +1,36 @@
+===========================================================
+    GUÍA RÁPIDA DE GITHUB PARA PROYECTOS UNIVERSITARIOS
+===========================================================
+Este archivo contiene los pasos y comandos que realizamos hoy para que los tengas como respaldo.
+
+1. CONFIGURACIÓN INICIAL (Solo se hace una vez)
+----------------------------------------------
+> git init                          # Inicia el repositorio local (crea el "cerebro" de git).
+> git add .                         # Prepara todos los archivos para subirlos.
+> git commit -m "Primer commit"     # Guarda una "foto" de tu código localmente.
+> git branch -M main                # Asegura que la rama principal se llame 'main'.
+> git remote add origin [URL]       # Conecta tu carpeta con el link de GitHub.
+
+2. SUBIR CAMBIOS A GITHUB (El paso final)
+-----------------------------------------
+Cada vez que quieras enviar tu código a internet, usa:
+> git push -u origin main           # "Empuja" tus archivos al servidor de GitHub.
+
+3. CÓMO IGNORAR ARCHIVOS (El archivo .gitignore)
+------------------------------------------------
+Si no quieres que un archivo (como bases de datos o informes privados) aparezca en internet:
+1. Abre el archivo '.gitignore' y escribe el nombre del archivo dentro.
+2. Si el archivo YA está en GitHub y quieres quitarlo SIN borrarlo de tu PC, usa:
+   > git rm --cached [nombre_del_archivo]
+   > git add .
+   > git commit -m "Quitar archivo de internet"
+   > git push origin main
+
+4. COMANDOS DE CONSULTA ÚTILES
+------------------------------
+> git status                        # Te dice qué archivos han cambiado o faltan subir.
+> git log                           # Muestra el historial de "fotos" (commits) que has hecho.
+
+-----------------------------------------------------------
+¡Mucho éxito en tu carrera de Ingeniería! 🚀
+-----------------------------------------------------------
