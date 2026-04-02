@@ -1,0 +1,87 @@
+================================================================================
+         INFORME DE PROYECTO: SISTEMA INTELIGENTE SENTIMENT-IQ
+================================================================================
+
+ESTUDIANTE: [TU NOMBRE AQUÍ]
+INSTITUCIÓN: Instituto Profesional de Líderes (IPL)
+LICENCIATURA: Inteligencia Artificial
+MATERIA: Proyecto Integrador IA
+FECHA: Marzo 2026
+
+--------------------------------------------------------------------------------
+1. PROPÓSITO GENERAL DEL PROYECTO
+--------------------------------------------------------------------------------
+Desarrollar un sistema funcional en Python que actúe como una herramienta de 
+inteligencia de negocios, capaz de procesar reseñas de productos, almacenarlas 
+en una base de datos y utilizar un modelo de clasificación para determinar la 
+satisfacción del cliente (Positivo/Negativo/Neutral).
+
+--------------------------------------------------------------------------------
+2. DESARROLLO TÉCNICO POR MATERIAS (MÓDULOS)
+--------------------------------------------------------------------------------
+
+MODULO A: ARQUITECTURA ORIENTADA A OBJETOS (POO)
+- Herencia y Polimorfismo: Se implementó una jerarquía de clases donde 'Admin' 
+  y 'Customer' heredan de una clase abstracta 'User', redefiniendo el método 
+  'get_permissions()' según el rol.
+- Encapsulamiento: Uso estricto de atributos privados (__password) y protegidos 
+  (_user_id) para garantizar la seguridad de los datos sensibles.
+
+MODULO B: GESTIÓN DE MEMORIA Y DATOS
+- Estructuras Dinámicas: Los datos se cargan desde la base de datos a un 
+  diccionario de Python (Hash Map) en la clase 'DataRepository'.
+- Búsqueda Eficiente: Se implementó un algoritmo de búsqueda por hash que 
+  permite encontrar registros por ID en tiempo constante O(1).
+
+MODULO C: PERSISTENCIA RELACIONAL (BASES DE DATOS)
+- Motor de BD: Uso de SQLite para garantizar que la información no sea volátil.
+- Modelo DER: Diseño de tablas normalizadas ('users' y 'reviews') con 
+  relaciones de clave foránea (1:N).
+- Operaciones CRUD: El sistema permite crear usuarios, leer reseñas, 
+  actualizar sentimientos y borrar registros.
+
+MODULO D: INTERACCIÓN CON EL SISTEMA OPERATIVO
+- File System: Generación automática de reportes de actividad en archivos 
+  de log y exportación de datos a formato CSV.
+- Concurrencia (Hilos): Implementación de un módulo de respaldo (Backup) que 
+  simula la ejecución en segundo plano mediante el uso de la librería 'threading'.
+- Seguridad: Sistema de Login con validación de credenciales directamente 
+  contra la base de datos.
+
+--------------------------------------------------------------------------------
+3. REFLEXIÓN SOBRE LA TRANSICIÓN DE PARADIGMAS
+--------------------------------------------------------------------------------
+La transición de la programación procedural a la Orientada a Objetos (POO) ha 
+permitido que Sentiment-IQ sea un sistema modular y escalable. Mientras que 
+un script procedural es difícil de mantener, la estructura de clases permite 
+aislar la lógica de la base de datos de la lógica de análisis de sentimientos. 
+El manejo de la persistencia relacional es lo que convierte a una aplicación 
+simple en un software empresarial real.
+
+--------------------------------------------------------------------------------
+4. CONCLUSIÓN FINAL
+--------------------------------------------------------------------------------
+El desarrollo del sistema Sentiment-IQ integra exitosamente los paradigmas de 
+Programación Orientada a Objetos, Estructuras de Datos Eficientes y Persistencia 
+Relacional. La arquitectura modular basada en herencia y polimorfismo permite 
+que el sistema sea escalable y profesional. La implementación de una base de 
+datos normalizada garantiza la integridad de los datos de feedback, mientras 
+que el análisis de sentimientos automatizado provee una ventaja competitiva en 
+la toma de decisiones empresariales. Este proyecto demuestra la capacidad de 
+transformar código complejo en una solución de Inteligencia de Negocios.
+
+--------------------------------------------------------------------------------
+5. REFERENCIAS BIBLIOGRÁFICAS (APA 7ma Edición)
+--------------------------------------------------------------------------------
+1. Python Software Foundation. (2024). Python 3.12 documentation. 
+   https://docs.python.org/3/
+2. Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. 
+   Journal of Machine Learning Research.
+3. SQLite Consortium. (2024). SQLite Documentation. https://www.sqlite.org/
+4. Deitel, P., & Deitel, H. (2020). Python for Programmers. Pearson Education.
+
+--------------------------------------------------------------------------------
+NOTA DE ENTREGA:
+Los diagramas visuales (UML y DER) se encuentran adjuntos como archivos PNG 
+generados automáticamente por el sistema en la misma carpeta del proyecto.
+================================================================================
